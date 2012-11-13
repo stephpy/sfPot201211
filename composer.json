@@ -1,0 +1,12 @@
+{
+    "name": "sfpotmarseille/nov12",
+    "description": "Use case for sfPot presentation.",
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/config": "2.1.*",
+        "symfony/console": "2.1.*",
+        "symfony/class-loader": "2.1.*",
+        "symfony/dependency-injection": "2.1.*",
+        "symfony/yaml": "2.1.*"
+    }
+}

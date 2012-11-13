@@ -1,0 +1,16 @@
+sfpot:
+    recipient:
+        - chucktesta@god.com
+        - chucknorris@god.com
+        - sheldoncooper@god.com
+    food:
+        - chips
+        - olives
+    drink:
+        biere:
+            type: canette
+            quantity: 33
+        rose:
+            type: bouteille
+            quantity: 1
+        champagne:    100

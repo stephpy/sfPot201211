@@ -1,0 +1,31 @@
+parameters:
+    mailer.class:     \SfPot\Mailer
+    mailer.transport: gmail
+    mailer.user:      chucktesta
+    mailer.password:  taxidermiste
+
+    logger.class:    \SfPot\Logger
+    # app_path is defined on ContainerBuilder.
+    log.path:     %app_path%/log
+
+services:
+    mailer:
+        class: %mailer.class%
+        arguments:
+            - @logger
+            - %mailer.transport%
+            - %mailer.user%
+            - %mailer.password%
+
+    logger:
+        class: %logger.class%
+        arguments:
+            - %log.path%
+
+    event_alert:
+        class: \SfPot\Event\Alert
+        arguments:
+            - @mailer
+            - %sfpot.recipients%
+        calls:
+              - [ setFood,  [%sfpot.food%] ]
